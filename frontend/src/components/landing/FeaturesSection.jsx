@@ -1,19 +1,21 @@
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Check } from 'lucide-react';
-import WordsPullUpMultiStyle from './WordsPullUpMultiStyle';
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { ArrowRight, Check } from "lucide-react";
+import WordsPullUpMultiStyle from "./WordsPullUpMultiStyle";
 
 const CARD_EASE = [0.22, 1, 0.36, 1];
 
 function FeatureCard({ children, index }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <motion.div
       ref={ref}
       initial={{ scale: 0.95, opacity: 0 }}
-      animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0 }}
+      animate={
+        isInView ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0 }
+      }
       transition={{
         delay: index * 0.15,
         duration: 0.7,
@@ -37,7 +39,10 @@ function CheckItem({ text }) {
 
 function LearnMoreLink() {
   return (
-    <a href="#" className="inline-flex items-center gap-1 text-gray-500 hover:text-primary text-xs sm:text-sm transition-colors group mt-auto">
+    <a
+      href="#"
+      className="inline-flex items-center gap-1 text-gray-500 hover:text-primary text-xs sm:text-sm transition-colors group mt-auto"
+    >
       Learn more
       <ArrowRight className="w-3.5 h-3.5 -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
     </a>
@@ -46,14 +51,21 @@ function LearnMoreLink() {
 
 export default function FeaturesSection() {
   const headingSegments = [
-    { text: 'Multilingual AI that reaches every lead.', className: 'text-[#E1E0CC]' },
-    { text: 'Qualifies them. Hands them off perfectly.', className: 'text-gray-500' }, 
-    
-   
+    {
+      text: "Multilingual AI that reaches every lead.",
+      className: "text-[#E1E0CC]",
+    },
+    {
+      text: "Qualifies them. Hands them off perfectly.",
+      className: "text-gray-500",
+    },
   ];
 
   return (
-    <section id="features" className="relative min-h-screen bg-black py-20 sm:py-28 md:py-36 px-4 sm:px-6 overflow-hidden">
+    <section
+      id="features"
+      className="relative min-h-screen bg-black py-20 sm:py-28 md:py-36 px-4 sm:px-6 overflow-hidden"
+    >
       {/* Noise overlay */}
       <div className="absolute inset-0 bg-noise opacity-[0.15] pointer-events-none" />
 
@@ -67,7 +79,6 @@ export default function FeaturesSection() {
 
         {/* 4-column card grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2 md:gap-1 lg:h-[480px]">
-
           {/* Card 1 — Video */}
           <FeatureCard index={0}>
             <div className="relative h-full min-h-[300px] lg:min-h-0 rounded-2xl overflow-hidden">
@@ -144,7 +155,7 @@ export default function FeaturesSection() {
               <div>
                 <span className="text-gray-500 text-xs">03</span>
                 <h3 className="text-[#E1E0CC] text-base sm:text-lg font-medium mt-1">
-                   Intelligent Lead Routing.
+                  Intelligent Lead Routing.
                 </h3>
               </div>
               <div className="flex flex-col gap-2.5 flex-1">
