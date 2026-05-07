@@ -83,7 +83,7 @@ export default function FeaturesSection() {
           <FeatureCard index={0}>
             <div className="relative h-full min-h-[300px] lg:min-h-0 rounded-2xl overflow-hidden">
               <video
-                src="src/video/From KlickPin CF Rustic Summer Salad Recipes for Everyday Life - Pin-933230354039887527.mp4"
+                src="src/video/v2.mp4"
                 autoPlay
                 loop
                 muted
