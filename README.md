@@ -218,6 +218,9 @@ Set `DEMO_MODE=true` in `.env` (default). In demo mode:
 - ✅ Full scoring, memory, and routing work end-to-end
 - ✅ Dashboard updates in real-time
 
+> [!IMPORTANT]
+> **Note on Phone Integration:** We are currently using **Demo Mode** with simulated data because obtaining a production Caller ID from providers like Exotel or Twilio requires a paid subscription and business verification. Since all reliable Caller ID providers are paid services, we are using the demo pipeline to showcase the full intelligence and routing capabilities of the project without incurring costs.
+
 ### Demo Personas
 
 | Name | Language | Personality | Expected Score |
