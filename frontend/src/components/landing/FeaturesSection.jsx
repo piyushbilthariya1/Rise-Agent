@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import WordsPullUpMultiStyle from "./WordsPullUpMultiStyle";
+import v2Video from "../../video/v2.mp4";
 
 const CARD_EASE = [0.22, 1, 0.36, 1];
 
@@ -83,7 +84,7 @@ export default function FeaturesSection() {
           <FeatureCard index={0}>
             <div className="relative h-full min-h-[300px] lg:min-h-0 rounded-2xl overflow-hidden">
               <video
-                src="src/video/v2.mp4"
+                src={v2Video}
                 autoPlay
                 loop
                 muted
